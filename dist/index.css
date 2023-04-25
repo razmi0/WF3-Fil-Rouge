@@ -1,0 +1,4 @@
+/* Import all css files from the assets folder */
+/* path : index.css */
+
+@import "./assets/css/style.css";
