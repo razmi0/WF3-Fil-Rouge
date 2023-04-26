@@ -10,7 +10,8 @@
       "noUncheckedIndexedAccess": true,
       "declarationMap": true,
       "declaration": true,
-      "declarationDir": "src/types"
+      "declarationDir": "src/types",
+      "allowImportingTsExtensions": false,
     },
     "watchOptions": {
       // Use native file system events for files and directories
@@ -22,7 +23,7 @@
     },
     "files": [
       "./src/main.ts",
-      "./src/scripts/index.ts",
-      "./src/Classes/Meal.ts",
+      "./src/barrel.ts",
+      "./src/models/Meal.ts",
     ]
   }
