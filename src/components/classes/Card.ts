@@ -2,33 +2,21 @@
 // path to the file: scripts/Classes/Meal.js
 //--
 
-import { Product } from "../interface/interface";
-
-/**
- * @class Card
- * @description Une instance = 1 card
- * @param {string} name - Nom de la'card
- * @param {number} price - Prix de la'card
- * @param {string} description - Description de la'card
- * @param {string} imageSrc - Chemin vers l'image de la'card
- * @param {string} imageAlt - Texte alternatif de l'image de la'card
- */
+import { Product } from "../../interface/interface.js";
 
 class Card {
   private name: string;
   private price: number;
   private description: string;
-  private imageSrc?: string;
-  private imageAlt?: string;
+  private imageSrc: string;
+  private imageAlt: string;
 
   constructor(public product: Product) {
     this.name = product.name;
     this.price = product.price;
-    if (!product.description) {
-      this.description = "Aucune description";
-    } else {
-      this.description = product.description;
-    }
+    product.description
+      ? (this.description = product.description)
+      : (this.description = "Aucune description");
     this.imageSrc = product.imageSrc;
     this.imageAlt = product.imageAlt;
   }

@@ -1,29 +1,25 @@
 {
-    "compilerOptions": {
-      "outDir": "dist",
-      "baseUrl" : "./",
-      "target": "ESNext",
-      "module": "ES6",
-      "noEmitOnError": false,
-      "strict": true,
-      "moduleResolution": "node",
-      "noUncheckedIndexedAccess": true,
-      "declarationMap": true,
-      "declaration": true,
-      "declarationDir": "src/types",
-      "allowImportingTsExtensions": false,
-    },
-    "watchOptions": {
-      // Use native file system events for files and directories
-      "watchFile": "useFsEvents",
-      "watchDirectory": "useFsEvents",
-      "fallbackPolling": "dynamicPriority",
-      // Don't coalesce watch notification
-      "synchronousWatchDirectory": true
-    },
-    "files": [
-      "./src/main.ts",
-      "./src/barrel.ts",
-      "./src/models/Meal.ts",
-    ]
-  }
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "./",
+    "target": "ESNext",
+    "module": "ES6",
+    "noEmitOnError": false,
+    "strict": true,
+    "moduleResolution": "node",
+    "noUncheckedIndexedAccess": true,
+    "declarationMap": true,
+    "declaration": true,
+    "declarationDir": "src/types",
+    "allowImportingTsExtensions": false
+  },
+  "watchOptions": {
+    // Use native file system events for files and directories
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    // Don't coalesce watch notification
+    "synchronousWatchDirectory": true
+  },
+  // "files": ["./src/main.ts", "./src/barrel.ts", "./src/templates/classes/*.ts"]
+}

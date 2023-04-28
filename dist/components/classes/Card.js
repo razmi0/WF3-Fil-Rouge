@@ -1,15 +1,6 @@
 // Description: Contient le template de chaque type d'card
 // path to the file: scripts/Classes/Meal.js
 //--
-/**
- * @class Card
- * @description Une instance = 1 card
- * @param {string} name - Nom de la'card
- * @param {number} price - Prix de la'card
- * @param {string} description - Description de la'card
- * @param {string} imageSrc - Chemin vers l'image de la'card
- * @param {string} imageAlt - Texte alternatif de l'image de la'card
- */
 class Card {
     product;
     name;
@@ -21,12 +12,9 @@ class Card {
         this.product = product;
         this.name = product.name;
         this.price = product.price;
-        if (!product.description) {
-            this.description = "Aucune description";
-        }
-        else {
-            this.description = product.description;
-        }
+        product.description
+            ? (this.description = product.description)
+            : (this.description = "Aucune description");
         this.imageSrc = product.imageSrc;
         this.imageAlt = product.imageAlt;
     }

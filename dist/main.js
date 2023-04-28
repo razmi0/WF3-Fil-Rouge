@@ -3,7 +3,20 @@
 //--
 // Imports
 //--
-import { Card } from "./barrel.js";
+import { Card, Button, Section, initComponentsButtons, initComponentsSections, renderComponent, } from "./components/ComponentsModule.js";
+//---------- Body Rendering ----------//
+// details : from top to bottom
+//--
+// Buttons
+//--
+const btnContainer = document.querySelector("#btn-container");
+const buttons = initComponentsButtons();
+renderComponent(buttons, btnContainer, Button);
+// Sections with Cards
+//--
+const sectionContainer = document.querySelector("#section-container");
+const sections = initComponentsSections();
+renderComponent(sections, sectionContainer, Section);
 // HTML Elements
 //--
 const elements = {
@@ -44,8 +57,8 @@ const images = [
 for (let image of images) {
     if (!image) {
         image = {
-            src: "default.svg",
-            alt: "default.svg",
+            src: "./dist/assets/images/logo/logo.jpg",
+            alt: "default image",
         };
     }
 }

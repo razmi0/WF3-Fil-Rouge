@@ -1,15 +1,27 @@
 export type Images = {
-    src: string | null;
-    alt: string | null;
+    src: string;
+    alt: string;
 }[];
 export type Elements = {
-    [key: string]: HTMLElement | null;
+    [key: string]: HTMLElement;
 };
-export type Product = {
+export interface Product {
     name: string;
     price: number;
     description?: string;
-    imageSrc: string | null;
-    imageAlt: string | null;
-};
+    imageSrc: string;
+    imageAlt: string;
+}
+export interface ButtonElement {
+    element: string;
+    type: string;
+    text: string;
+    class: string;
+    id: string;
+}
+export interface SectionElement {
+    element: string;
+    class: string;
+    id: string;
+}
 //# sourceMappingURL=interface.d.ts.map
