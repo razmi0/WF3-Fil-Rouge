@@ -7,7 +7,7 @@ function validateImagesArray(images) {
 }
 function getDefaultImage() {
     return {
-        src: "./dist/assets/images/logo/logo.jpg",
+        src: "./public/assets/images/logo/logo.jpg",
         alt: "default image",
     };
 }
@@ -26,4 +26,4 @@ function imageFalsyTest(images) {
     });
 }
 export { validateImagesArray };
-//# sourceMappingURL=image-validation.js.map
+//# sourceMappingURL=img-validation.js.map

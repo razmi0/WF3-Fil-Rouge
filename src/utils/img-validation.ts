@@ -11,7 +11,7 @@ function validateImagesArray(images: Images): Images {
 
 function getDefaultImage(): Image {
   return {
-    src: "./dist/assets/images/logo/logo.jpg",
+    src: "./public/assets/images/logo/logo.jpg",
     alt: "default image",
   };
 }

@@ -1,4 +1,4 @@
 /* Import all css files from the assets folder and node_modules */
 /* path : index.css */
 
-@import "./assets/css/style.css";
+@import "./style.css";

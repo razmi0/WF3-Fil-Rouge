@@ -85,4 +85,4 @@ export function initComponentsSections() {
     array.push(sectionPoissonOptions);
     return array;
 }
-//# sourceMappingURL=components.js.map
+//# sourceMappingURL=init.js.map

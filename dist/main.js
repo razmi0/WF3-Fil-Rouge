@@ -4,7 +4,7 @@
 // Imports
 //--
 import { Button, Section, initComponentsButtons, initComponentsSections, renderComponent, } from "./components/module.js";
-import { validateImagesArray } from "./utils/image-validation.js";
+import { validateImagesArray } from "./utils/img-validation.js";
 //---------- Body Rendering ----------//
 // details : from top to bottom
 //--
@@ -35,27 +35,27 @@ const elements = {
 //--
 const images = [
     {
-        src: "./dist/assets/images/IMG_6600.svg",
+        src: "./public/assets/images/IMG_6600.svg",
         alt: "produit 1",
     },
     {
-        src: "./dist/assets/images/IMG_6602.svg",
+        src: "./public/assets/images/IMG_6602.svg",
         alt: "produit 2",
     },
     {
-        src: "./dist/assets/images/IMG_6603.svg",
+        src: "./public/assets/images/IMG_6603.svg",
         alt: "produit 3",
     },
     {
-        src: "./dist/assets/images/IMG_6605.svg",
+        src: "./public/assets/images/IMG_6605.svg",
         alt: "produit 4",
     },
     {
-        src: "./dist/assets/images/IMG_6606.svg",
+        src: "./public/assets/images/IMG_6606.svg",
         alt: "produit 5",
     },
     {
-        src: "./dist/assets/images/IMG_6609.svg",
+        src: "./public/assets/images/IMG_6609.svg",
         alt: "produit 6",
     },
 ];

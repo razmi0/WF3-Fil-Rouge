@@ -9,8 +9,8 @@ import Button from "./classes/Button.js";
 import Section from "./classes/Section.js";
 // Importation des fonctions utilitaires
 //--
-import { renderComponent, initComponentsButtons, initComponentsSections } from './utils/components.js';
+import { renderComponent, initComponentsButtons, initComponentsSections, } from "./init/init.js";
 // Exportation
 //--
-export { Card, Button, Section, renderComponent, initComponentsButtons, initComponentsSections };
+export { Card, Button, Section, renderComponent, initComponentsButtons, initComponentsSections, };
 //# sourceMappingURL=module.js.map
