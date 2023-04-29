@@ -76,9 +76,12 @@ const images: Images = [
   },
 ];
 const validatedImages = validateImagesArray(images);
+console.log(validatedImages);
+
 
 //Products
 //--
+
 
 
 
