@@ -1,3 +1,5 @@
 # All typescript source files
-# *.d.ts.map
+*.d.ts.map
+*.d.ts
 node_modules
+dist/interface
