@@ -1,5 +1,4 @@
 /* Import all css files from the assets folder and node_modules */
 /* path : index.css */
 
-@import "../node_modules/@picocss/pico/css/pico.min.css";
 @import "./assets/css/style.css";
