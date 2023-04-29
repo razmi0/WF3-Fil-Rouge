@@ -1,13 +1,15 @@
 {
-  "name": "thomas",
+  "name": "a_emporter_fil_rouge_front",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
 }
