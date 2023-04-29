@@ -2,19 +2,12 @@
 // path : src/components/render/render.ts
 //--
 
-import { ButtonElement, SectionElement } from "../../interface/interface.js";
+import { ButtonElement, SectionElement } from "../../interface/index-types.js";
 
-// Importation des classes
 
-// Function used to render components
-// Takes an array of object options, a parent element and a classe component
-//--
 
 export function renderComponent(
-  options: any[],
-  parent: HTMLElement,
-  classe: any
-): void {
+{ options, parent, classe }: { options: any[]; parent: HTMLElement; classe: any; }): void {
   options.forEach((option: {}) => {
     const component = new classe(option);
     component.render(parent);

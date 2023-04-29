@@ -2,7 +2,7 @@
 // path to the file: src/templates/classes/Section.ts
 //--
 
-import { SectionElement } from "../../interface/interface.js";
+import { SectionElement } from "../../interface/index-types.js";
 
 class Section {
   private element: string;

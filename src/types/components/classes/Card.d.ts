@@ -1,4 +1,4 @@
-import { Product } from "../../interface/interface.js";
+import { Product } from "../../interface/index-types.js";
 declare class Card {
     product: Product;
     private name;

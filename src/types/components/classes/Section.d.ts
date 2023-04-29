@@ -1,4 +1,4 @@
-import { SectionElement } from "../../interface/interface.js";
+import { SectionElement } from "../../interface/index-types.js";
 declare class Section {
     private element;
     private class;

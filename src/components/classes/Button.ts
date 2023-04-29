@@ -2,7 +2,7 @@
 // path to the file: src/templates/classes/Button.ts
 //--
 
-import { ButtonElement } from "../../interface/interface.js";
+import { ButtonElement } from "../../interface/index-types.js";
 
 class Button {
   private element: string;

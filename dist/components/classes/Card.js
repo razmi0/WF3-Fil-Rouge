@@ -51,7 +51,7 @@ class Card {
      * @description Injecte le template dans l'élément HTML
      */
     render(element) {
-        element.innerHTML = this.template();
+        element.innerHTML += this.template();
     }
 }
 export default Card;

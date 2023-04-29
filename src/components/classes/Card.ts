@@ -2,7 +2,7 @@
 // path to the file: scripts/Classes/Meal.js
 //--
 
-import { Product } from "../../interface/interface.js";
+import { Product } from "../../interface/index-types.js";
 
 class Card {
   private name: string;
@@ -57,7 +57,7 @@ class Card {
    */
 
   public render(element: HTMLElement): void {
-    element.innerHTML = this.template();
+    element.innerHTML += this.template();
   }
 }
 

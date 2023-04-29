@@ -3,7 +3,8 @@
 //--
 // Imports
 //--
-import { Card, Button, Section, initComponentsButtons, initComponentsSections, renderComponent, } from "./components/ComponentsModule.js";
+import { Button, Section, initComponentsButtons, initComponentsSections, renderComponent, } from "./components/module.js";
+import { validateImagesArray } from "./utils/image-validation.js";
 //---------- Body Rendering ----------//
 // details : from top to bottom
 //--
@@ -11,12 +12,16 @@ import { Card, Button, Section, initComponentsButtons, initComponentsSections, r
 //--
 const btnContainer = document.querySelector("#btn-container");
 const buttons = initComponentsButtons();
-renderComponent(buttons, btnContainer, Button);
+renderComponent({ options: buttons, parent: btnContainer, classe: Button });
 // Sections with Cards
 //--
 const sectionContainer = document.querySelector("#section-container");
 const sections = initComponentsSections();
-renderComponent(sections, sectionContainer, Section);
+renderComponent({
+    options: sections,
+    parent: sectionContainer,
+    classe: Section,
+});
 // HTML Elements
 //--
 const elements = {
@@ -54,24 +59,8 @@ const images = [
         alt: "produit 6",
     },
 ];
-for (let image of images) {
-    if (!image) {
-        image = {
-            src: "./dist/assets/images/logo/logo.jpg",
-            alt: "default image",
-        };
-    }
-}
+const validatedImages = validateImagesArray(images);
 //Products
 //--
-const product1 = {
-    name: "Pièce de boeuf",
-    price: 15,
-    description: "Une pièce de boeuf de 500g",
-    imageSrc: images[0].src,
-    imageAlt: images[0].alt,
-};
 // Cards
 //--
-const card1 = new Card(product1);
-card1.render(elements.viande);

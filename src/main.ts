@@ -11,9 +11,9 @@ import {
   initComponentsButtons,
   initComponentsSections,
   renderComponent,
-} from "./components/ComponentsModule.js";
-import { Elements, Images, Product } from "./interface/interface.js";
-
+} from "./components/module.js";
+import { Element, Elements, Images, Product } from "./interface/index-types.js";
+import { validateImagesArray } from "./utils/image-validation.js";
 //---------- Body Rendering ----------//
 // details : from top to bottom
 //--
@@ -22,7 +22,7 @@ import { Elements, Images, Product } from "./interface/interface.js";
 
 const btnContainer = document.querySelector("#btn-container") as HTMLDivElement;
 const buttons = initComponentsButtons();
-renderComponent(buttons, btnContainer, Button);
+renderComponent({ options: buttons, parent: btnContainer, classe: Button });
 
 // Sections with Cards
 //--
@@ -31,11 +31,15 @@ const sectionContainer = document.querySelector(
   "#section-container"
 ) as HTMLDivElement;
 const sections = initComponentsSections();
-renderComponent(sections, sectionContainer, Section);
+renderComponent({
+  options: sections,
+  parent: sectionContainer,
+  classe: Section,
+});
 
 // HTML Elements
 //--
-const elements: Elements = {
+const elements: Element = {
   boisson: document.querySelector("#boisson") as HTMLElement,
   dessert: document.querySelector("#dessert") as HTMLElement,
   viande: document.querySelector("#viande") as HTMLElement,
@@ -71,28 +75,14 @@ const images: Images = [
     alt: "produit 6",
   },
 ];
-
-for (let image of images) {
-  if (!image) {
-    image = {
-      src: "./dist/assets/images/logo/logo.jpg",
-      alt: "default image",
-    };
-  }
-}
+const validatedImages = validateImagesArray(images);
 
 //Products
 //--
 
-const product1: Product = {
-  name: "Pièce de boeuf",
-  price: 15,
-  description: "Une pièce de boeuf de 500g",
-  imageSrc: images[0].src,
-  imageAlt: images[0].alt,
-};
+
+
+
 
 // Cards
 //--
-const card1 = new Card(product1);
-card1.render(elements.viande);

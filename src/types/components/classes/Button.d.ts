@@ -1,4 +1,4 @@
-import { ButtonElement } from "../../interface/interface.js";
+import { ButtonElement } from "../../interface/index-types.js";
 declare class Button {
     private element;
     private type;
