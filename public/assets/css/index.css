@@ -1,4 +1,10 @@
-/* Import all css files from the assets folder and node_modules */
-/* path : index.css */
+/* CSS MODULES */
 
-@import "./style.css";
+
+/* Path: public/assets/css/index.css */
+
+
+@import "./normalize.css";
+@import "./fonts.css";
+@import "./buttons.css";
+@import "./colors.css";

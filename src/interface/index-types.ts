@@ -40,6 +40,7 @@ interface SectionElement {
   element: string;
   class: string;
   id: string;
+  data : string;
 }
 type SectionElements = SectionElement[];
 

@@ -1,4 +1,14 @@
 import { Product } from "../../interface/index-types.js";
+/**
+ * @class Card
+ * @classdesc - Create a card element
+ * @property {string} name - Product name
+ * @property {number} price - Product price
+ * @property {string} description - Product description
+ * @property {string} imageSrc - Product image source
+ * @property {string} imageAlt - Product image alt
+ * @param {Product} product - Product options
+ */
 declare class Card {
     product: Product;
     private name;
@@ -10,15 +20,14 @@ declare class Card {
     /**
      * @visibility private
      * @method template
-     * @returns {string} - Retourne le template HTML de l'card
+     * @returns {string} - Return the HTML template as a string
      */
     private template;
     /**
      * @method render
      * @visibility public
      * @param {HTMLElement} element - Element HTML dans lequel le template sera injecté
-     * @returns {void}
-     * @description Injecte le template dans l'élément HTML
+     * @description Inject le template dans l'élément HTML
      */
     render(element: HTMLElement): void;
 }

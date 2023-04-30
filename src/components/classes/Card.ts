@@ -4,6 +4,17 @@
 
 import { Product } from "../../interface/index-types.js";
 
+/**
+ * @class Card
+ * @classdesc - Create a card element
+ * @property {string} name - Product name
+ * @property {number} price - Product price
+ * @property {string} description - Product description
+ * @property {string} imageSrc - Product image source
+ * @property {string} imageAlt - Product image alt
+ * @param {Product} product - Product options
+ */
+
 class Card {
   private name: string;
   private price: number;
@@ -24,26 +35,20 @@ class Card {
   /**
    * @visibility private
    * @method template
-   * @returns {string} - Retourne le template HTML de l'card
+   * @returns {string} - Return the HTML template as a string
    */
 
   private template(): string {
     return `
         <div class="card">
-            <div class="card-header">
-                <h2>${this.name}</h2>
+          <div class="card-body">
+            <img class="card-img-top" src="${this.imageSrc}" alt="${this.imageAlt}">
+            <div class="card-text">
+              <h4>${this.name}</h4>
+              <p>${this.description}</p>
+              <p>${this.price}</p>
             </div>
-            <div class="card-body">
-                <div class="card-body__content">
-                    <div class="card-body__content__image">
-                        <img src="${this.imageSrc}" alt="${this.imageAlt}">
-                    </div>
-                    <div class="card-body__content__text">
-                        <p>${this.description}</p>
-                        <p>${this.price}</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
         `;
   }
@@ -52,8 +57,7 @@ class Card {
    * @method render
    * @visibility public
    * @param {HTMLElement} element - Element HTML dans lequel le template sera injecté
-   * @returns {void}
-   * @description Injecte le template dans l'élément HTML
+   * @description Inject le template dans l'élément HTML
    */
 
   public render(element: HTMLElement): void {

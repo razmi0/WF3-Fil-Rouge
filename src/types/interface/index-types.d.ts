@@ -27,6 +27,7 @@ interface SectionElement {
     element: string;
     class: string;
     id: string;
+    data: string;
 }
 type SectionElements = SectionElement[];
 export { Image, Images, Element, Elements, Product, Products, ButtonElement, ButtonElements, SectionElement, SectionElements, };

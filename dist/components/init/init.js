@@ -8,42 +8,50 @@ export function renderComponent({ options, parent, classe }) {
     });
 }
 export function initComponentsButtons() {
+    const buttonAllOptions = {
+        element: "button",
+        type: "button",
+        id: "btn-all",
+        class: "btn bg-3",
+        text: "All",
+    };
     const buttonBoissonOptions = {
         element: "button",
         type: "button",
         id: "btn-boisson",
-        class: "btn btn-primary",
+        class: "btn bg-3 ",
         text: "Boisson",
     };
     const buttonDessertOptions = {
         element: "button",
         type: "button",
         id: "btn-dessert",
-        class: "btn btn-primary",
+        class: "btn bg-3",
         text: "Dessert",
     };
     const buttonViandeOptions = {
         element: "button",
         type: "button",
         id: "btn-viande",
-        class: "btn btn-primary",
+        class: "btn bg-3 ",
         text: "Viande",
     };
     const buttonGlaceOptions = {
         element: "button",
         type: "button",
         id: "btn-glace",
-        class: "btn btn-primary",
+        class: "btn bg-3 ",
         text: "Glace",
     };
     const buttonPoissonOptions = {
         element: "button",
         type: "button",
         id: "btn-poisson",
-        class: "btn btn-primary",
+        class: "btn bg-3 ",
         text: "Poisson",
     };
     const array = [];
+    array.push(buttonAllOptions);
     array.push(buttonBoissonOptions);
     array.push(buttonDessertOptions);
     array.push(buttonViandeOptions);
@@ -55,27 +63,32 @@ export function initComponentsSections() {
     const sectionBoissonOptions = {
         element: "section",
         id: "boisson",
-        class: "boisson",
+        class: "d-flex d-none",
+        data: "boisson"
     };
     const sectionDessertOptions = {
         element: "section",
         id: "dessert",
-        class: "dessert",
+        class: "d-flex d-none",
+        data: "dessert"
     };
     const sectionViandeOptions = {
         element: "section",
         id: "viande",
-        class: "viande",
+        class: "d-flex d-none",
+        data: "viande"
     };
     const sectionGlaceOptions = {
         element: "section",
         id: "glace",
-        class: "glace",
+        class: "d-flex d-none",
+        data: "glace"
     };
     const sectionPoissonOptions = {
         element: "section",
         id: "poisson",
-        class: "poisson",
+        class: "d-flex d-none",
+        data: "poisson"
     };
     const array = [];
     array.push(sectionBoissonOptions);

@@ -1,0 +1,37 @@
+/* BUTTON  */
+
+/* Path: public/assets/css/buttons.css */
+
+div[id="btn-container"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+}
+
+div[id="btn-container"] > button[data-button] {
+  font-family: "Lora", serif;
+  height: auto;
+  width: 6rem;
+  border-radius: 5px;
+  margin: 5px 10px;
+}
+div[id="btn-container"] > button[data-button]:hover {
+  background-color: rgb(159, 167, 147);
+  transition: background-color 100ms ease-in-out;
+}
+
+@media screen and (max-width: 300px) {
+  div[id="btn-container"] {
+    padding: 2px;
+    margin : 10px 2px;
+  }
+  div[id="btn-container"] > button[data-button] {
+    width: 5rem;
+    margin: 2px 5px;
+  }
+}
