@@ -1,3 +1,6 @@
+// Contain all the events for the buttons
+// path : src/events/button-events.ts
+//--
 export function addAllButtonsEvents() {
     buttonSort("#btn-all", "[data-type]");
     buttonSort("#btn-boisson", "#boisson");

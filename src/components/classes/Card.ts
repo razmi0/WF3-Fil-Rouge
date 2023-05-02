@@ -2,7 +2,7 @@
 // path to the file: scripts/Classes/Meal.js
 //--
 
-import { Product } from "../../interface/index-types.js";
+import {CardType} from "../../interface/index-types.js";
 
 /**
  * @class Card
@@ -22,7 +22,7 @@ class Card {
   private imageSrc: string;
   private imageAlt: string;
 
-  constructor(public product: Product) {
+  constructor(public product: CardType) {
     this.name = product.name;
     this.price = product.price;
     product.description
@@ -54,10 +54,10 @@ class Card {
   }
 
   /**
+   * Inject le template dans l'élément HTML
    * @method render
    * @visibility public
    * @param {HTMLElement} element - Element HTML dans lequel le template sera injecté
-   * @description Inject le template dans l'élément HTML
    */
 
   public render(element: HTMLElement): void {

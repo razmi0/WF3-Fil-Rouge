@@ -48,10 +48,10 @@ class Card {
         `;
     }
     /**
+     * Inject le template dans l'élément HTML
      * @method render
      * @visibility public
      * @param {HTMLElement} element - Element HTML dans lequel le template sera injecté
-     * @description Inject le template dans l'élément HTML
      */
     render(element) {
         element.innerHTML += this.template();

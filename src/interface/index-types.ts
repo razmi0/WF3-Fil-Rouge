@@ -3,56 +3,69 @@
 //--
 
 // TYPE IMAGE
-interface Image {
+//--
+
+export interface Image {
   src: string;
   alt: string;
 }
-type Images = Image[];
+export type Images = Image[];
 
 // TYPE ELEMENT
-interface Element {
+//--
+
+export interface Element {
   [key: string]: HTMLElement;
 }
-type Elements = Element[];
+export type Elements = Element[];
 
 // TYPE PRODUCT
-interface Product {
-  name: string;
-  price: number;
-  description?: string;
-  imageSrc: string;
-  imageAlt: string;
-}
-type Products = Product[];
+//--
 
-// TYPE BUTTON ELEMENT
-interface ButtonElement {
-  element: string;
-  type: string;
-  text: string;
-  class: string;
-  id: string;
+export interface Product {
+  data: [
+    name: string,
+    price: number,
+    description: string,
+    imageSrc: string,
+    imageAlt: string
+  ];
 }
-type ButtonElements = ButtonElement[];
+export type Products = Product[];
 
-// TYPE SECTION ELEMENT
-interface SectionElement {
+// TYPE CARD
+//--
+
+export interface CardType {
+  name: string,
+  price: number,
+  description: string,
+  imageSrc: string,
+  imageAlt: string
+}
+export type Cards = CardType[];
+
+// TYPE SECTION
+//--
+
+export interface SectionElement {
   element: string;
   class: string;
   id: string;
   data : string;
 }
-type SectionElements = SectionElement[];
+export type SectionElements = SectionElement[];
 
-export {
-  Image,
-  Images,
-  Element,
-  Elements,
-  Product,
-  Products,
-  ButtonElement,
-  ButtonElements,
-  SectionElement,
-  SectionElements,
-};
+// TYPE BUTTON
+//--
+
+export interface ButtonElement {
+  element: string;
+  type: string;
+  text: string | undefined;
+  class: string;
+  id: string | undefined;
+}
+export type ButtonElements = ButtonElement[];
+
+

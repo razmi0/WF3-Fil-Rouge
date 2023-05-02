@@ -18,9 +18,9 @@ import { ButtonElement } from "../../interface/index-types.js";
 class Button {
   private element: string;
   private type: string;
-  private text: string;
+  private text: string | undefined;
   private class: string;
-  private id: string;
+  private id: string | undefined; 
 
   constructor(buttonOptions: ButtonElement) {
     this.element = buttonOptions.element;

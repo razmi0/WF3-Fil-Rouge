@@ -1,5 +1,6 @@
-import { ButtonElements } from "src/interface/index-types";
-
+// Contain all the events for the buttons
+// path : src/events/button-events.ts
+//--
 
 export function addAllButtonsEvents(): void {
   buttonSort("#btn-all", "[data-type]");

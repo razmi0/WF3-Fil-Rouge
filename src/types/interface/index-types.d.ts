@@ -1,34 +1,43 @@
-interface Image {
+export interface Image {
     src: string;
     alt: string;
 }
-type Images = Image[];
-interface Element {
+export type Images = Image[];
+export interface Element {
     [key: string]: HTMLElement;
 }
-type Elements = Element[];
-interface Product {
+export type Elements = Element[];
+export interface Product {
+    data: [
+        name: string,
+        price: number,
+        description: string,
+        imageSrc: string,
+        imageAlt: string
+    ];
+}
+export type Products = Product[];
+export interface CardType {
     name: string;
     price: number;
-    description?: string;
+    description: string;
     imageSrc: string;
     imageAlt: string;
 }
-type Products = Product[];
-interface ButtonElement {
-    element: string;
-    type: string;
-    text: string;
-    class: string;
-    id: string;
-}
-type ButtonElements = ButtonElement[];
-interface SectionElement {
+export type Cards = CardType[];
+export interface SectionElement {
     element: string;
     class: string;
     id: string;
     data: string;
 }
-type SectionElements = SectionElement[];
-export { Image, Images, Element, Elements, Product, Products, ButtonElement, ButtonElements, SectionElement, SectionElements, };
+export type SectionElements = SectionElement[];
+export interface ButtonElement {
+    element: string;
+    type: string;
+    text: string | undefined;
+    class: string;
+    id: string | undefined;
+}
+export type ButtonElements = ButtonElement[];
 //# sourceMappingURL=index-types.d.ts.map

@@ -6,24 +6,12 @@
 // Importation des classes
 //--
 import Card from "./classes/Card.js";
-import Button from "./classes/Button.js";
 import Section from "./classes/Section.js";
-
+import Button from "./classes/Button.js";
+import { renderComponent } from "./init/init.js";
 // Importation des fonctions utilitaires
 //--
-import {
-  renderComponent,
-  initComponentsButtons,
-  initComponentsSections,
-} from "./init/init.js";
 
 // Exportation
 //--
-export {
-  Card,
-  Button,
-  Section,
-  renderComponent,
-  initComponentsButtons,
-  initComponentsSections,
-};
+export { Card, Section, Button, renderComponent };

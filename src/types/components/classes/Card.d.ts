@@ -1,4 +1,4 @@
-import { Product } from "../../interface/index-types.js";
+import { CardType } from "../../interface/index-types.js";
 /**
  * @class Card
  * @classdesc - Create a card element
@@ -10,13 +10,13 @@ import { Product } from "../../interface/index-types.js";
  * @param {Product} product - Product options
  */
 declare class Card {
-    product: Product;
+    product: CardType;
     private name;
     private price;
     private description;
     private imageSrc;
     private imageAlt;
-    constructor(product: Product);
+    constructor(product: CardType);
     /**
      * @visibility private
      * @method template
@@ -24,10 +24,10 @@ declare class Card {
      */
     private template;
     /**
+     * Inject le template dans l'élément HTML
      * @method render
      * @visibility public
      * @param {HTMLElement} element - Element HTML dans lequel le template sera injecté
-     * @description Inject le template dans l'élément HTML
      */
     render(element: HTMLElement): void;
 }
