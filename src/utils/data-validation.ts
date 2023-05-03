@@ -86,7 +86,7 @@ export function stringFormat(str: string | undefined): string | undefined {
   const regexp = /[\w]+[s]$/g;
   if (typeof str === "string") {
     if (!regexp.test(str)) {
-      str = str?.charAt(0).toUpperCase() + str?.slice(1) + "s";      
+      str = str?.charAt(0).toUpperCase() + str?.slice(1) + "s";
     }
   }
   return str ? str : undefined;

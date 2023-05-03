@@ -2,12 +2,12 @@
 // path : src/events/button-events.ts
 //--
 export function addAllButtonsEvents() {
-    buttonSort("#btn-all", "[data-type]");
-    buttonSort("#btn-boisson", "#boisson");
-    buttonSort("#btn-dessert", "#dessert");
-    buttonSort("#btn-viande", "#viande");
-    buttonSort("#btn-glace", "#glace");
-    buttonSort("#btn-poisson", "#poisson");
+    // buttonSort("#btn-all", "[data-type]");
+    buttonSort("#btn-boissons", "#sec-boissons");
+    buttonSort("#btn-desserts", "#sec-desserts");
+    buttonSort("#btn-viandes", "#sec-viandes");
+    buttonSort("#btn-glaces", "#sec-glaces");
+    buttonSort("#btn-poissons", "#sec-poissons");
 }
 function changeButtonStyle(button) {
     if (button.classList.contains("bg-3")) {
@@ -31,6 +31,7 @@ function buttonSort(buttonId, sectionId) {
     const button = document.querySelector(`${buttonId}`);
     const section = document.querySelectorAll(`${sectionId}`);
     button?.addEventListener("click", (e) => {
+        console.log("click");
         changeButtonStyle(button);
         for (const el of section) {
             changeSectionStyle(el);

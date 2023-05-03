@@ -7,16 +7,6 @@ export interface Element {
     [key: string]: HTMLElement;
 }
 export type Elements = Element[];
-export interface Product {
-    data: [
-        name: string,
-        price: number,
-        description: string,
-        imageSrc: string,
-        imageAlt: string
-    ];
-}
-export type Products = Product[];
 export interface CardType {
     name: string;
     price: number;

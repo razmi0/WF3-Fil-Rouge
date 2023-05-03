@@ -8,10 +8,12 @@
 import Card from "./classes/Card.js";
 import Section from "./classes/Section.js";
 import Button from "./classes/Button.js";
-import { renderComponent } from "./init/init.js";
+import Body from "./classes/Body.js";
+import Product from "./classes/Product.js";
+import Ressources from "./classes/Ressources.js";
 // Importation des fonctions utilitaires
 //--
 
 // Exportation
 //--
-export { Card, Section, Button, renderComponent };
+export { Body, Button, Section, Product, Ressources, Card };

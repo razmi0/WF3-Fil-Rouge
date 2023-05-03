@@ -3,12 +3,12 @@
 //--
 
 export function addAllButtonsEvents(): void {
-  buttonSort("#btn-all", "[data-type]");
-  buttonSort("#btn-boisson", "#boisson");
-  buttonSort("#btn-dessert", "#dessert");
-  buttonSort("#btn-viande", "#viande");
-  buttonSort("#btn-glace", "#glace");
-  buttonSort("#btn-poisson", "#poisson");
+  // buttonSort("#btn-all", "[data-type]");
+  buttonSort("#btn-boissons", "#sec-boissons");
+  buttonSort("#btn-desserts", "#sec-desserts");
+  buttonSort("#btn-viandes", "#sec-viandes");
+  buttonSort("#btn-glaces", "#sec-glaces");
+  buttonSort("#btn-poissons", "#sec-poissons");
 }
 
 function changeButtonStyle(button: HTMLButtonElement): void {
@@ -33,6 +33,7 @@ function buttonSort(buttonId: string, sectionId: string) {
   const button = document.querySelector(`${buttonId}`) as HTMLButtonElement;
   const section = document.querySelectorAll(`${sectionId}`);
   button?.addEventListener("click", (e) => {
+    console.log("click");
     changeButtonStyle(button);
     for (const el of section) {
       changeSectionStyle(el as HTMLElement);

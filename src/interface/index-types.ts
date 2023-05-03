@@ -22,16 +22,16 @@ export type Elements = Element[];
 // TYPE PRODUCT
 //--
 
-export interface Product {
-  data: [
-    name: string,
-    price: number,
-    description: string,
-    imageSrc: string,
-    imageAlt: string
-  ];
-}
-export type Products = Product[];
+// export interface Product {
+//   data: [
+//     name: string,
+//     price: number,
+//     description: string,
+//     imageSrc: string,
+//     imageAlt: string
+//   ];
+// }
+// export type Products = Product[];
 
 // TYPE CARD
 //--
@@ -41,7 +41,7 @@ export interface CardType {
   price: number,
   description: string,
   imageSrc: string,
-  imageAlt: string
+  imageAlt: string,
 }
 export type Cards = CardType[];
 
