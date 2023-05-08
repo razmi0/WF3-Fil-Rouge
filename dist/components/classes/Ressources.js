@@ -8,14 +8,19 @@ class Ressources {
         const allProducts = [];
         try {
             for (let i = 0; i < endpoints.length; i++) {
-                //@ts-ignore
-                const req = await fetch(endpoints[i]);
-                const res = await req.json();
-                //@ts-ignore
-                allProducts.push({
-                    data: res,
-                    ressource: endpoints[i]?.pathname.replaceAll("/", ""),
-                });
+                if (endpoints[i]) {
+                    // @ts-ignore
+                    const req = await fetch(endpoints[i]);
+                    const res = await req.json();
+                    allProducts.push({
+                        data: res,
+                        // @ts-ignore
+                        ressource: endpoints[i].pathname.replaceAll("/", ""),
+                    });
+                }
+                else {
+                    throw new Error("Endpoint Array is not defined");
+                }
             }
         }
         catch (error) {

@@ -78,6 +78,6 @@ export function stringFormat(str) {
             str = str?.charAt(0).toUpperCase() + str?.slice(1) + "s";
         }
     }
-    return str ? str : undefined;
+    return str;
 }
 //# sourceMappingURL=data-validation.js.map

@@ -4,30 +4,50 @@
 //--
 
 
-
 /**
  * Function to get the execution time of a function on console
  * @async
  * @param {CallableFunction} fc Function to be executed
  * @param {*} parameters Parameters of the function to be executed
- * @returns {Promise<void>}
+ * @param {boolean} flag Flag to indicate if the function to be executed has parameters
+ * @returns {Promise<void | { success : boolean } >} return a promise with the result of the execution
  */
-export async function timeTest(
+export function syncTimeTest(
   fc: CallableFunction,
-  parameters: any
-): Promise<void> {
-  try{
-    if (!fc || !parameters) {
-      throw new Error("Missing parameters");
-    }
-    const t1 = performance.now();
-    await fc(parameters);
-    const t2 = performance.now();
-    console.log({
-      Execution: `${fc.name}(${parameters})`,
-      Time: `${t2 - t1} ms`,
-    });
+  parameters: any = null,
+  flag: boolean = false
+) : { success : boolean } {
+  try {
+      const t1 = performance.now();
+      flag ?  fc(parameters) :  fc();
+      const t2 = performance.now();
+      console.log({
+        Execution: `${fc.name}(${parameters})`,
+        Time: `${t2 - t1} ms`,
+      });
+    return { success: true };
   } catch (error) {
-    console.warn(error);
+    console.error(error);
+    return { success: false };
+  }
+}
+
+export async function asyncTimeTest(
+  fc: CallableFunction,
+  parameters: any = null,
+  flag: boolean = false
+): Promise<void | { success : boolean }> {
+  try {
+      const t1 = performance.now();
+      flag ? await fc(parameters) : await fc();
+      const t2 = performance.now();
+      console.log({
+        Execution: `${fc.name}(${parameters})`,
+        Time: `${t2 - t1} ms`,
+      });
+    return { success: true };
+  } catch (error) {
+    console.error(error);
+    return { success: false };
   }
 }

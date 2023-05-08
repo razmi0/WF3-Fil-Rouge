@@ -3,6 +3,7 @@
 //--
 
 import { SectionElement } from "../../interface/index-types.js";
+import Body from "./Body.js";
 
 
 
@@ -28,6 +29,7 @@ class Section {
     this.id = SectionOptions.id;
     this.data = SectionOptions.data;
   }
+
   /**
    * @visibility private
    * @method template
@@ -51,6 +53,10 @@ class Section {
   public render(element: HTMLDivElement): void {
     element.innerHTML += this.template();
   }
+
+
+  
+
 }
 
 export default Section;

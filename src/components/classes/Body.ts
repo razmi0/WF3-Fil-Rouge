@@ -4,7 +4,7 @@
 import { Button, Section, Ressources, Card } from "../module.js";
 import {
   ButtonElements,
-  SectionElements
+  SectionElements,
 } from "../../interface/index-types.js";
 import { stringFormat } from "../../utils/data-validation.js";
 import addAllButtonsEvents from "../../events/button-events.js";
@@ -13,7 +13,7 @@ class Body {
   private fetchedData: any[] = [];
   private ressources: string[] = [];
   private products: any[] = [];
-  private sectionsElements : NodeListOf<HTMLElement> = [];
+  private sectionsElements: HTMLElement[] = [];
   constructor() {}
 
   /**
@@ -22,7 +22,11 @@ class Body {
    * @param {HTMLElement} parent
    * @param {any} classe
    */
-  private renderComponents(options: any[],parent: HTMLElement,classe: any): void {
+  private renderComponents(
+    options: any[],
+    parent: HTMLElement,
+    classe: any
+  ): void {
     options.forEach((option) => {
       const component = new classe(option);
       component.render(parent);
@@ -61,23 +65,27 @@ class Body {
       });
     }
     this.renderComponents(sections, sectionsContainer, Section);
-    this.sectionsElements = document.querySelectorAll('section');
+    const nodeList: NodeListOf<HTMLElement> =
+      document.querySelectorAll("section");
+    this.sectionsElements = Array.from(nodeList);
   }
 
   private cardRender(): void {
-    console.log(this.products[0]);
-    console.log(this.products[0].length);
-    for(let j = 0; j < this.products.length; j++) {
+    console.log(this.products);
+    for (let j = 0; j < this.products.length; j++) {
       for (let i = 0; i < this.products[j].length; i++) {
-        const { name, price, description, imageSrc, imageAlt } = this.products[j][i];
-        const card : Card = new Card({
+        const { name, price, description, imageSrc, imageAlt } =
+          this.products[j][i];
+        const card: Card = new Card({
           description: description,
           name: name,
           price: price,
           imageSrc: imageSrc,
           imageAlt: imageAlt,
         });
-        card.render(this.sectionsElements[j]);
+        if (this.sectionsElements && this.sectionsElements[j]) {
+          card.render(this.sectionsElements[j]!);
+        }
       }
     }
   }
@@ -85,9 +93,9 @@ class Body {
   private async getData(): Promise<void> {
     const dataSet = new Ressources();
     this.fetchedData = await dataSet.getProducts();
-    this.ressources = this.fetchedData.map((product) => {
-      return stringFormat(product.ressource);
-    });
+    this.ressources = this.fetchedData.map((product) =>
+      stringFormat(product.ressource)
+    );
     this.products = this.fetchedData.map((product) => {
       return product.data;
     });

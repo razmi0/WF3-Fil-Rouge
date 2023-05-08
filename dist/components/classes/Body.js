@@ -48,11 +48,11 @@ class Body {
             });
         }
         this.renderComponents(sections, sectionsContainer, Section);
-        this.sectionsElements = document.querySelectorAll('section');
+        const nodeList = document.querySelectorAll("section");
+        this.sectionsElements = Array.from(nodeList);
     }
     cardRender() {
-        console.log(this.products[0]);
-        console.log(this.products[0].length);
+        console.log(this.products);
         for (let j = 0; j < this.products.length; j++) {
             for (let i = 0; i < this.products[j].length; i++) {
                 const { name, price, description, imageSrc, imageAlt } = this.products[j][i];
@@ -63,16 +63,16 @@ class Body {
                     imageSrc: imageSrc,
                     imageAlt: imageAlt,
                 });
-                card.render(this.sectionsElements[j]);
+                if (this.sectionsElements && this.sectionsElements[j]) {
+                    card.render(this.sectionsElements[j]);
+                }
             }
         }
     }
     async getData() {
         const dataSet = new Ressources();
         this.fetchedData = await dataSet.getProducts();
-        this.ressources = this.fetchedData.map((product) => {
-            return stringFormat(product.ressource);
-        });
+        this.ressources = this.fetchedData.map((product) => stringFormat(product.ressource));
         this.products = this.fetchedData.map((product) => {
             return product.data;
         });
