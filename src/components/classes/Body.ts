@@ -1,20 +1,29 @@
 // Body Components Rendering
 // Path : src/components/classes/Body.ts
 // --
-import { Button, Section, Ressources, Card } from "../module.js";
+
+// IMPORTS
+
 import {
+  HtmlFixed,
+  Button,
+  Section,
+  Ressources,
+  Card,
   ButtonElements,
   SectionElements,
-} from "../../interface/index-types.js";
-import { stringFormat } from "../../utils/data-validation.js";
-import addAllButtonsEvents from "../../events/button-events.js";
+  stringFormat,
+  addAllButtonsEvents,
+} from "../ComponentsModule.js";
 
-class Body {
+class Body extends HtmlFixed {
   private fetchedData: any[] = [];
   private ressources: string[] = [];
   private products: any[] = [];
   private sectionsElements: HTMLElement[] = [];
-  constructor() {}
+  constructor() {
+    super();
+  }
 
   /**
    * Declare and render the component with all given options
@@ -41,11 +50,11 @@ class Body {
 
     for (let i = 0; i < this.ressources.length; i++) {
       buttons.push({
-        element: "button",
-        type: "button",
+        element: HtmlFixed.buttonType,
+        type: HtmlFixed.buttonType,
         text: this.ressources[i],
-        class: "btn bg-3",
-        id: `btn-${this.ressources[i]?.toLowerCase()}`,
+        class: HtmlFixed.buttonClass,
+        id: `${HtmlFixed.buttonId}${this.ressources[i]?.toLowerCase()}`,
       });
     }
     this.renderComponents(buttons, btnContainer, Button);
@@ -58,9 +67,9 @@ class Body {
     ) as HTMLDivElement;
     for (let i = 0; i < this.ressources.length; i++) {
       sections.push({
-        element: "section",
-        class: "d-flex d-none",
-        id: `sec-${this.ressources[i]?.toLowerCase()}`,
+        element: HtmlFixed.sectionType,
+        class: HtmlFixed.sectionClass,
+        id: `${HtmlFixed.sectionId}${this.ressources[i]?.toLowerCase()}`,
         data: `${this.ressources[i]?.toLowerCase()}`,
       });
     }
@@ -108,7 +117,7 @@ class Body {
       this.sectionRender();
       this.cardRender();
       addAllButtonsEvents();
-      return true
+      return true;
     } catch (e) {
       console.warn(e);
       throw new Error("Error while running Body.run()");

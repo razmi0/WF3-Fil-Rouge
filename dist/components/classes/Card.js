@@ -18,6 +18,7 @@ class Card {
     description;
     imageSrc;
     imageAlt;
+    id;
     constructor(product) {
         this.product = product;
         this.name = product.name;
@@ -27,6 +28,7 @@ class Card {
             : (this.description = "Aucune description");
         this.imageSrc = product.imageSrc;
         this.imageAlt = product.imageAlt;
+        this.id = this.name.toLowerCase().replaceAll(" ", "");
     }
     /**
      * @visibility private
@@ -35,16 +37,30 @@ class Card {
      */
     template() {
         return `
-        <div class="card">
-          <div class="card-body">
-            <img class="card-img-top" src="${this.imageSrc}" alt="${this.imageAlt}">
-            <div class="card-text">
-              <h4>${this.name}</h4>
-              <p>${this.description}</p>
-              <p>${this.price}</p>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" 
+              type="button" data-bs-toggle="collapse" 
+              data-bs-target="#${this.id}" 
+              aria-expanded="false" 
+              aria-controls="${this.id}">
+        ${this.name}
+      </button>
+    </h2>
+    <div id="${this.id}" class="accordion-collapse collapse" data-bs-parent="#accordion">
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <img src="${this.imageSrc}" alt="${this.imageAlt}" class="img-fluid">
             </div>
-          </div>
-        </div>
+            <div class="col-12 col-md-6">
+              <p class="card-text">${this.description}</p>
+              <p class="card-text">${this.price} €</p>
+              <button class="btn btn-primary">Ajouter au panier</button>
+
+      </div>
+    </div>
+  </div>
         `;
     }
     /**

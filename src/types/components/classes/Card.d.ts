@@ -16,6 +16,7 @@ declare class Card {
     private description;
     private imageSrc;
     private imageAlt;
+    private id;
     constructor(product: CardType);
     /**
      * @visibility private

@@ -3,11 +3,11 @@
 //--
 export function addAllButtonsEvents() {
     // buttonSort("#btn-all", "[data-type]");
-    buttonSort("#btn-boissons", "#sec-boissons");
-    buttonSort("#btn-desserts", "#sec-desserts");
-    buttonSort("#btn-viandes", "#sec-viandes");
-    buttonSort("#btn-glaces", "#sec-glaces");
-    buttonSort("#btn-poissons", "#sec-poissons");
+    buttonSort("#btn-boissons", "[data-type='boissons']");
+    buttonSort("#btn-desserts", "[data-type='desserts']");
+    buttonSort("#btn-viandes", "[data-type='viandes']");
+    buttonSort("#btn-glaces", "[data-type='glaces']");
+    buttonSort("#btn-poissons", "[data-type='poissons']");
 }
 function changeButtonStyle(button) {
     if (button.classList.contains("bg-3")) {
@@ -27,9 +27,9 @@ function changeSectionStyle(section) {
         section.classList.add("d-none");
     }
 }
-function buttonSort(buttonId, sectionId) {
+function buttonSort(buttonId, secData) {
     const button = document.querySelector(`${buttonId}`);
-    const section = document.querySelectorAll(`${sectionId}`);
+    const section = document.querySelectorAll(`${secData}`);
     button?.addEventListener("click", (e) => {
         console.log("click");
         changeButtonStyle(button);
