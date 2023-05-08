@@ -27,7 +27,7 @@ export interface ButtonElement {
     type: string;
     text: string | undefined;
     class: string;
-    id: string | undefined;
+    id: string;
 }
 export type ButtonElements = ButtonElement[];
 //# sourceMappingURL=index-types.d.ts.map

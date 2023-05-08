@@ -101,15 +101,18 @@ class Body {
     });
   }
 
-  public async run(): Promise<void> {
-    console.log("Body is running");
-    await this.getData();
-    this.buttonRender();
-    this.sectionRender();
-    this.cardRender();
-    console.log("Listeners");
-    addAllButtonsEvents();
-    console.log("Body is finished");
+  public async run(): Promise<boolean> {
+    try {
+      await this.getData();
+      this.buttonRender();
+      this.sectionRender();
+      this.cardRender();
+      addAllButtonsEvents();
+      return true
+    } catch (e) {
+      console.warn(e);
+      throw new Error("Error while running Body.run()");
+    }
   }
 }
 

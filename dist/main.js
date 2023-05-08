@@ -17,5 +17,8 @@ console.log("Begin of main.js");
     //--
     console.log(`Execution time : ${t2 - t1} ms`);
 })();
+// const body = new Body();
+// const test = await asyncTimeTest(body.run);
+// console.log(test);
 console.log("End of main.js");
 //# sourceMappingURL=main.js.map

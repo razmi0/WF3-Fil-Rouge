@@ -19,19 +19,6 @@ export interface Element {
 }
 export type Elements = Element[];
 
-// TYPE PRODUCT
-//--
-
-// export interface Product {
-//   data: [
-//     name: string,
-//     price: number,
-//     description: string,
-//     imageSrc: string,
-//     imageAlt: string
-//   ];
-// }
-// export type Products = Product[];
 
 // TYPE CARD
 //--
@@ -64,7 +51,7 @@ export interface ButtonElement {
   type: string;
   text: string | undefined;
   class: string;
-  id: string | undefined;
+  id: string ;
 }
 export type ButtonElements = ButtonElement[];
 

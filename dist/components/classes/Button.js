@@ -20,7 +20,7 @@ class Button {
     constructor(buttonOptions) {
         this.element = buttonOptions.element;
         this.type = buttonOptions.type;
-        this.text = buttonOptions.text;
+        this.text = buttonOptions.text ?? "---";
         this.class = buttonOptions.class;
         this.id = buttonOptions.id;
     }

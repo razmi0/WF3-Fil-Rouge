@@ -5,8 +5,8 @@
 
 
 /**
- * Function to get the execution time of a function on console
- * @async
+ * Sync Function to get the execution time of a function on console
+ * @Sync
  * @param {CallableFunction} fc Function to be executed
  * @param {*} parameters Parameters of the function to be executed
  * @param {boolean} flag Flag to indicate if the function to be executed has parameters
@@ -32,22 +32,35 @@ export function syncTimeTest(
   }
 }
 
+
+
+/**
+ * Async Function to get the execution time of a function on console
+ * @Async
+ * @param {CallableFunction} fc Function to be executed
+ * @param {*} parameters Parameters of the function to be executed
+ * @param {boolean} flag Flag to indicate if the function to be executed has parameters
+ * @returns {Promise<void | { success : boolean } >} return a promise with the result of the execution
+ */
 export async function asyncTimeTest(
   fc: CallableFunction,
   parameters: any = null,
   flag: boolean = false
 ): Promise<void | { success : boolean }> {
-  try {
-      const t1 = performance.now();
-      flag ? await fc(parameters) : await fc();
-      const t2 = performance.now();
-      console.log({
-        Execution: `${fc.name}(${parameters})`,
-        Time: `${t2 - t1} ms`,
-      });
-    return { success: true };
-  } catch (error) {
-    console.error(error);
-    return { success: false };
+  async () => {
+    try {
+        const t1 = performance.now();
+        console.log("go test");
+        flag ? await fc(parameters) : await fc();
+        const t2 = performance.now();
+        console.log({
+          Execution: `${fc.name}(${parameters})`,
+          Time: `${t2 - t1} ms`,
+        });
+      return { success: true };
+    } catch (error) {
+      console.error(error);
+      return { success: false };
+    }
   }
 }

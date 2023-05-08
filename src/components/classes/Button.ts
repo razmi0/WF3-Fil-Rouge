@@ -18,14 +18,14 @@ import { ButtonElement } from "../../interface/index-types.js";
 class Button {
   private element: string;
   private type: string;
-  private text: string | undefined;
+  private text: string;
   private class: string;
-  private id: string | undefined; 
+  private id: string; 
 
   constructor(buttonOptions: ButtonElement) {
     this.element = buttonOptions.element;
     this.type = buttonOptions.type;
-    this.text = buttonOptions.text;
+    this.text = buttonOptions.text ?? "---";
     this.class = buttonOptions.class;
     this.id = buttonOptions.id;
   }
