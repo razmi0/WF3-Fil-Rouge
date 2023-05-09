@@ -56,3 +56,13 @@ export interface ButtonElement {
 export type ButtonElements = ButtonElement[];
 
 
+export interface NavElement {
+  menu: HTMLElement;
+  toggleButton: HTMLElement;
+  languageButtonFR: HTMLElement;
+  languageButtonEN: HTMLElement;
+  menuBurger: HTMLElement;
+  toggleButtonBurger: HTMLElement;
+}
+
+export type NavElements = NavElements[];
