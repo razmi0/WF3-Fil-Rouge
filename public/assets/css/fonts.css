@@ -6,3 +6,7 @@ font-family: 'Lora', serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Sacramento', cursive; 
 */
+* {
+    font-family: "Lora", serif;
+  /* font-size: calc(2vw + 50%); */
+}

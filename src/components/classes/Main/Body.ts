@@ -5,7 +5,7 @@
 // IMPORTS
 
 import {
-  HtmlFixed,
+  StaticData,
   Button,
   Section,
   Ressources,
@@ -16,14 +16,11 @@ import {
   addAllButtonsEvents,
 } from "../../Modules.js";
 
-class Body extends HtmlFixed{
+class Body{
   private fetchedData: any[] = [];
   private ressources: string[] = [];
   private products: any[] = [];
   private sectionsElements: HTMLElement[] = [];
-  constructor() {
-    super();
-  }
 
   /**
    * Declare and render the component with all given options
@@ -50,11 +47,11 @@ class Body extends HtmlFixed{
 
     for (let i = 0; i < this.ressources.length; i++) {
       buttons.push({
-        element: HtmlFixed.buttonType,
-        type: HtmlFixed.buttonType,
+        element: StaticData.buttonType,
+        type: StaticData.buttonType,
         text: this.ressources[i],
-        class: HtmlFixed.buttonClass,
-        id: `${HtmlFixed.buttonId}${this.ressources[i]?.toLowerCase()}`,
+        class: StaticData.buttonClass,
+        id: `${StaticData.buttonId}${this.ressources[i]?.toLowerCase()}`,
       });
     }
     this.renderComponents(buttons, btnContainer, Button);
@@ -67,9 +64,9 @@ class Body extends HtmlFixed{
     ) as HTMLDivElement;
     for (let i = 0; i < this.ressources.length; i++) {
       sections.push({
-        element: HtmlFixed.sectionType,
-        class: HtmlFixed.sectionClass,
-        id: `${HtmlFixed.sectionId}${this.ressources[i]?.toLowerCase()}`,
+        element: StaticData.sectionType,
+        class: StaticData.sectionClass,
+        id: `${StaticData.sectionId}${this.ressources[i]?.toLowerCase()}`,
         data: `${this.ressources[i]?.toLowerCase()}`,
       });
     }
@@ -80,7 +77,6 @@ class Body extends HtmlFixed{
   }
 
   private cardRender(): void {
-    console.log(this.products);
     for (let j = 0; j < this.products.length; j++) {
       for (let i = 0; i < this.products[j].length; i++) {
         const { name, price, description, imageSrc, imageAlt } =
@@ -115,17 +111,21 @@ class Body extends HtmlFixed{
   }
 
   public async run(): Promise<boolean> {
+    const t1 = performance.now();
     try {
       await this.getData();
       this.buttonRender();
       this.sectionRender();
       this.cardRender();
       this.addEvents();
+      const t2 = performance.now();
+      console.log(`Body rendered in ${t2 - t1} milliseconds.`);
       return true;
     } catch (e) {
       console.warn(e);
       throw new Error("Error while running Body.run()");
     }
+
   }
 }
 

@@ -31,7 +31,6 @@ function buttonSort(buttonId, secData) {
     const button = document.querySelector(`${buttonId}`);
     const section = document.querySelectorAll(`${secData}`);
     button?.addEventListener("click", (e) => {
-        console.log("click");
         changeButtonStyle(button);
         for (const el of section) {
             changeSectionStyle(el);

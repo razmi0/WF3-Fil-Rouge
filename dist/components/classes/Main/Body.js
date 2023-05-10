@@ -2,15 +2,12 @@
 // Path : src/components/classes/Body.ts
 // --
 // IMPORTS
-import { HtmlFixed, Button, Section, Ressources, Card, stringFormat, addAllButtonsEvents, } from "../../Modules.js";
-class Body extends HtmlFixed {
+import { StaticData, Button, Section, Ressources, Card, stringFormat, addAllButtonsEvents, } from "../../Modules.js";
+class Body {
     fetchedData = [];
     ressources = [];
     products = [];
     sectionsElements = [];
-    constructor() {
-        super();
-    }
     /**
      * Declare and render the component with all given options
      * @param {any[]} options
@@ -28,11 +25,11 @@ class Body extends HtmlFixed {
         const btnContainer = document.querySelector("#btn-container");
         for (let i = 0; i < this.ressources.length; i++) {
             buttons.push({
-                element: HtmlFixed.buttonType,
-                type: HtmlFixed.buttonType,
+                element: StaticData.buttonType,
+                type: StaticData.buttonType,
                 text: this.ressources[i],
-                class: HtmlFixed.buttonClass,
-                id: `${HtmlFixed.buttonId}${this.ressources[i]?.toLowerCase()}`,
+                class: StaticData.buttonClass,
+                id: `${StaticData.buttonId}${this.ressources[i]?.toLowerCase()}`,
             });
         }
         this.renderComponents(buttons, btnContainer, Button);
@@ -42,9 +39,9 @@ class Body extends HtmlFixed {
         const sectionsContainer = document.querySelector("#section-container");
         for (let i = 0; i < this.ressources.length; i++) {
             sections.push({
-                element: HtmlFixed.sectionType,
-                class: HtmlFixed.sectionClass,
-                id: `${HtmlFixed.sectionId}${this.ressources[i]?.toLowerCase()}`,
+                element: StaticData.sectionType,
+                class: StaticData.sectionClass,
+                id: `${StaticData.sectionId}${this.ressources[i]?.toLowerCase()}`,
                 data: `${this.ressources[i]?.toLowerCase()}`,
             });
         }
@@ -53,7 +50,6 @@ class Body extends HtmlFixed {
         this.sectionsElements = Array.from(nodeList);
     }
     cardRender() {
-        console.log(this.products);
         for (let j = 0; j < this.products.length; j++) {
             for (let i = 0; i < this.products[j].length; i++) {
                 const { name, price, description, imageSrc, imageAlt } = this.products[j][i];
@@ -82,12 +78,15 @@ class Body extends HtmlFixed {
         });
     }
     async run() {
+        const t1 = performance.now();
         try {
             await this.getData();
             this.buttonRender();
             this.sectionRender();
             this.cardRender();
             this.addEvents();
+            const t2 = performance.now();
+            console.log(`Body rendered in ${t2 - t1} milliseconds.`);
             return true;
         }
         catch (e) {

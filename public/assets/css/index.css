@@ -6,7 +6,8 @@
 
 @import "./normalize.css";
 @import "./fonts.css";
-@import "./buttons.css";
 @import "./colors.css";
-@import "./nav.css";
-@import "./cards.css";
+/* --- */
+@import "./body.css";
+@import "./header/hero.css";
+@import "./header/nav.css";

@@ -35,10 +35,14 @@ function toggleBurgerMenu(elements) {
 }
 function removeDropdown(elements) {
     document.addEventListener("click", function (event) {
+        // @ts-ignore
         if (!elements.menu.contains(event.target) && !elements.toggleButton.contains(event.target)) {
             elements.menu.classList.remove("show");
         }
-        if (!elements.menuBurger.contains(event.target) &&
+        if (
+        // @ts-ignore
+        !elements.menuBurger.contains(event.target) &&
+            // @ts-ignore
             !elements.toggleButtonBurger.contains(event.target)) {
             elements.menuBurger.classList.remove("active");
         }

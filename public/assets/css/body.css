@@ -1,3 +1,5 @@
+/* BODY A EMPORTER ASSETS */
+
 /* BUTTON  */
 
 /* Path: public/assets/css/buttons.css */
@@ -14,7 +16,6 @@ div[id="btn-container"] {
 }
 
 div[id="btn-container"] > button[data-button] {
-  font-family: "Lora", serif;
   height: auto;
   width: 6rem;
   border-radius: 5px;
@@ -28,10 +29,18 @@ div[id="btn-container"] > button[data-button]:hover {
 @media screen and (max-width: 300px) {
   div[id="btn-container"] {
     padding: 2px;
-    margin : 10px 2px;
+    margin: 10px 2px;
   }
   div[id="btn-container"] > button[data-button] {
     width: 5rem;
     margin: 2px 5px;
   }
+}
+
+/* CARDS CSS */
+/* path : public\assets\css\cards.css */
+
+.img-format {
+  max-width: 200px;
+  max-height: 200px;
 }

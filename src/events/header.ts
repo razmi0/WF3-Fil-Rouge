@@ -45,11 +45,14 @@ function toggleBurgerMenu(elements: NavElement): void {
 
 function removeDropdown(elements: NavElement): void {
   document.addEventListener("click", function (event) {
+    // @ts-ignore
     if (!elements.menu.contains(event.target) && !elements.toggleButton.contains(event.target)) {
       elements.menu.classList.remove("show");
     }
     if (
+      // @ts-ignore
       !elements.menuBurger.contains(event.target) &&
+      // @ts-ignore
       !elements.toggleButtonBurger.contains(event.target)
     ) {
       elements.menuBurger.classList.remove("active");

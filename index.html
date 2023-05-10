@@ -25,21 +25,68 @@
       crossorigin="anonymous"
     ></script>
     <script defer type="module" src="./dist/main.js"></script>
-    <script defer src="https://kit.fontawesome.com/c971cac520.js" crossorigin="anonymous"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/c971cac520.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- <script defer src="./src/navbar.js"></script> -->
   </head>
   <body>
     <header id="header">
-      <nav class="navbar mb-2" id="navbar">
+      <nav class="navbar mb-2">
+        <div class="dropdown__menu_burger">
+          <div class="navbar__menu_burger">
+            <span class="navbar__menu_burger_topBar"></span>
+            <span class="navbar__menu_burger_middleBar"></span>
+            <span class="navbar__menu_burger_bottomBar"></span>
+          </div>
+          <!-- DYNAMIC CHOICES  -->
+        </div>
+        <div id="logo"></div>
+        <div class="navbar__icones">
+          <div class="navbar__icone_link">
+            <div class="navbar__icones_languages" id="flags">
+              <!-- DYNAMIC FLAGS  -->
+            </div>
+            <div class="dropdown__language-option">
+              <a href="#" class="dropdown__language-linkFR">Français</a>
+              <span></span>
+              <a href="#" class="dropdown__language-linkEN">English</a>
+            </div>
+          </div>
 
+          <a href="#" class="navbar__icone_link">
+            <div class="navbar__icones_reservation">
+              <i class="fa-solid fa-calendar fa-2xl"></i>
+            </div>
+          </a>
+
+          <a href="#" class="navbar__icone_link">
+            <div class="navbar__icones_gift">
+              <i class="fa-solid fa-gift fa-2xl"></i>
+            </div>
+          </a>
+
+          <a href="#" class="navbar__icone_link">
+            <div class="navbar__icones_cart">
+              <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+            </div>
+          </a>
+          <a href="#" class="navbar__icone_link">
+            <div class="navbar__icones_connexion">
+              <i class="fa-regular fa-user fa-2xl"></i>
+            </div>
+          </a>
+        </div>
       </nav>
     </header>
-    <div
+    <main
       class="container d-flex flex-column justify-items-center align-items-center"
     >
       <div id="btn-container" class="row"></div>
-      <div id="section-container" class="w-100" ></div>
-    </div>
+      <div id="section-container" class="w-75"></div>
+    </main>
     <footer>
       <!-- footer -->
     </footer>

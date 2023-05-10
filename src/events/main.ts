@@ -33,7 +33,6 @@ function buttonSort(buttonId: string, secData: string) {
   const button = document.querySelector(`${buttonId}`) as HTMLButtonElement;
   const section = document.querySelectorAll(`${secData}`);
   button?.addEventListener("click", (e) => {
-    console.log("click");
     changeButtonStyle(button);
     for (const el of section) {
       changeSectionStyle(el as HTMLElement);

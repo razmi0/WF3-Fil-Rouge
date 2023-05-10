@@ -1,5 +1,5 @@
 //-----------------------------------//
-// Importation des classes et fonctions utilitaires du module components
+// Importation des Classes et fonctions utilitaires du module components
 // path : src/components/ComponentsModule.ts
 //--
 
@@ -8,19 +8,19 @@
 //----------IMPORTATION--------------//
 //-----------------------------------//
 
-// Importation des classes
+// Importation des Classes
 //--
 
+// From services
+import StaticData from "../services/StaticData.js";
 
-import HtmlFixed from "./classes/Data/HtmlFixed.js";
-import Card from "./classes/Main/Card.js";
-import Section from "./classes/Main/Section.js";
-import Button from "./classes/Main/Button.js";
-import Body from "./classes/Main/Body.js";
-import Ressources from "./classes/Main/Ressources.js";
-import Header from "./classes/Header/Header.js";
-import Nav from "./classes/Header/Nav.js";
-import DropDown from "./classes/Header/Dropdown.js";
+// From components
+import Ressources from "./Classes/Main/Ressources.js";
+import Header from "./Classes/Header.js";
+import Body from "./Classes/Main/Body.js";
+import Section from "./Classes/Main/Section.js";
+import Button from "./Classes/Main/Button.js";
+import Card from "./Classes/Main/Card.js";
 
 
 // Importation des fonctions utilitaires
@@ -46,9 +46,9 @@ import { ButtonElements, SectionElements } from "../interface/index-types.js";
 
 
 
-// Exportation classes
+// Exportation Classes
 //--
-export { HtmlFixed, Header, Nav, DropDown, Body, Button, Section, Ressources, Card };
+export { StaticData, Header, Body, Button, Section, Ressources, Card };
 
 // Exportation fonctions utilitaires
 //--

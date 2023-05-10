@@ -44,28 +44,41 @@ class Card {
     return `
     <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" 
-              type="button" data-bs-toggle="collapse" 
-              data-bs-target="#${this.id}" 
-              aria-expanded="false" 
-              aria-controls="${this.id}">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#${this.id}"
+        aria-expanded="false"
+        aria-controls="${this.id}"
+      >
         ${this.name}
       </button>
     </h2>
-    <div id="${this.id}" class="accordion-collapse collapse" data-bs-parent="#accordion">
+    <div
+      id="${this.id}"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordion"
+    >
       <div class="accordion-body">
         <div class="row">
           <div class="col-12 col-md-6">
-            <img src="${this.imageSrc}" alt="${this.imageAlt}" class="img-fluid">
-            </div>
-            <div class="col-12 col-md-6">
-              <p class="card-text">${this.description}</p>
-              <p class="card-text">${this.price} €</p>
-              <button class="btn btn-primary">Ajouter au panier</button>
-
+            <img
+              src="${this.imageSrc}"
+              alt="${this.imageAlt}"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-12 col-md-6">
+            <p class="card-text">${this.description}</p>
+            <p class="card-text">${this.price} €</p>
+            <button class="btn btn-primary">Ajouter au panier</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  
         `;
   }
 

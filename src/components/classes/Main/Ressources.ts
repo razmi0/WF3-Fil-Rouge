@@ -2,7 +2,7 @@
 // path : src/components/classes/Product.ts
 //--
 
-import { endpoints } from "../../../services/endpoints.js";
+import { StaticData } from "../../Modules.js";
 
 class Ressources {
   constructor() {}
@@ -12,15 +12,15 @@ class Ressources {
   > {
     const allProducts: { data: string; ressource: string }[] = [];
     try {
-      for (let i = 0; i < endpoints.length; i++) {
-        if (endpoints[i]) {
+      for (let i = 0; i < StaticData.endpoints.length; i++) {
+        if (StaticData.endpoints[i]) {
           // @ts-ignore
-          const req = await fetch(endpoints[i]);
+          const req = await fetch(StaticData.endpoints[i]);
           const res = await req.json();
           allProducts.push({
             data: res,
             // @ts-ignore
-            ressource: endpoints[i].pathname.replaceAll("/", ""),
+            ressource: StaticData.endpoints[i].pathname.replaceAll("/", ""),
           });
         } else {
           throw new Error("Endpoint Array is not defined");
