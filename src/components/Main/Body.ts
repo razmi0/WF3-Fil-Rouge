@@ -12,7 +12,7 @@ import {
   ButtonElements,
   SectionElements,
   stringFormat,
-  renderComponents,
+  initComponents,
   addAllButtonsEvents,
 } from "../Modules.js";
 
@@ -38,7 +38,7 @@ class Body {
         id: `${StaticData.buttonId}${this.ressources[i]?.toLowerCase()}`,
       });
     }
-    renderComponents(buttons, btnContainer, Button);
+    initComponents(buttons, btnContainer, Button);
   }
 
   private sectionRender(): void {
@@ -54,7 +54,7 @@ class Body {
         data: `${this.ressources[i]?.toLowerCase()}`,
       });
     }
-    renderComponents(sections, sectionsContainer, Section);
+    initComponents(sections, sectionsContainer, Section);
     const nodeList: NodeListOf<HTMLElement> =
       document.querySelectorAll("section");
     this.sectionsElements = Array.from(nodeList);

@@ -8,7 +8,7 @@
  * @param {HTMLElement} parent
  * @param {any} classe
  */
-export function renderComponents(
+export function initComponents(
     options: any[],
     parent: HTMLElement,
     classe: any

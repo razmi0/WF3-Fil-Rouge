@@ -7,7 +7,7 @@
  * @param {HTMLElement} parent
  * @param {any} classe
  */
-export function renderComponents(options, parent, classe) {
+export function initComponents(options, parent, classe) {
     options.forEach((option) => {
         const component = new classe(option);
         component.render(parent);

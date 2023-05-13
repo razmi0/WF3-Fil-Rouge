@@ -2,7 +2,7 @@
 // Path : src/components/classes/Body.ts
 // --
 // IMPORTS
-import { StaticData, Button, Section, Card, stringFormat, renderComponents, addAllButtonsEvents, } from "../Modules.js";
+import { StaticData, Button, Section, Card, stringFormat, initComponents, addAllButtonsEvents, } from "../Modules.js";
 class Body {
     fetchedData = [];
     ressources = [];
@@ -20,7 +20,7 @@ class Body {
                 id: `${StaticData.buttonId}${this.ressources[i]?.toLowerCase()}`,
             });
         }
-        renderComponents(buttons, btnContainer, Button);
+        initComponents(buttons, btnContainer, Button);
     }
     sectionRender() {
         const sections = [];
@@ -33,7 +33,7 @@ class Body {
                 data: `${this.ressources[i]?.toLowerCase()}`,
             });
         }
-        renderComponents(sections, sectionsContainer, Section);
+        initComponents(sections, sectionsContainer, Section);
         const nodeList = document.querySelectorAll("section");
         this.sectionsElements = Array.from(nodeList);
     }
