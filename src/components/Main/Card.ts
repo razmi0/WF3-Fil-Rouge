@@ -53,7 +53,7 @@ class Card {
     </div>
     <div class="card__body">
       <div class="card__body_text">${this.description}</div>
-      <div class="card__body_price">${this.price}</div>
+      <div class="card__body_price">${this.price} &euro;</div>
     </div>
   </div>
   

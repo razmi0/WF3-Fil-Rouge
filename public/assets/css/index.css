@@ -3,10 +3,7 @@
 
 /* Path: public/assets/css/index.css */
 
-/*-- BASE --*/
-@import "./base/normalize.css";
-@import "./base/fonts.css";
-@import "./base/colors.css";
+
 /* --MAIN-- */
 @import "./main/cards.css";
 @import "./main/buttons.css";
@@ -16,3 +13,7 @@
 @import "./header/nav.css";
 /*-- FOOTER -- */
 @import "./footer/footer.css";
+/*-- BASE --*/
+@import "./base/normalize.css";
+@import "./base/fonts.css";
+@import "./base/colors.css";
