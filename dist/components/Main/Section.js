@@ -27,7 +27,7 @@ class Section {
      * @returns {string} - Return the HTML template as a string
      */
     template() {
-        return `
+        return `${(this.data).charAt(0).toUpperCase() + (this.data).slice(1)}
             <${this.element}
              class="${this.class}"
               id="${this.id}"

@@ -1,11 +1,31 @@
 /* SECTION */
 
-
 div#section-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: fit-content;
+  min-height: 1000px;
   width: 100%;
+  /* padding: 10px */
+}
+.products {
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  /* padding: 10px; */
+  margin: 10px;
+  gap: 10px;
+  width: 90%;
+  scroll-padding: 10px;
+  scroll-snap-align: center;
+}
+
+
+@media (max-width : 478px){
+  body>main.container {
+    padding: 0;
+  }
 }
