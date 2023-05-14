@@ -93,7 +93,7 @@ class Header {
         <img id="hero" src="${this.imagePath}/hero_image.JPG" alt="Image" class="hero image" aria-label="hero image" />
     </div>
     <div class="menu-encart-cadre">
-      <h1 class="menu-encart-texte">Carte & Menus</h1>
+      <h1 class="menu-encart-texte">A Emporter</h1>
     </div>
     `;
   }

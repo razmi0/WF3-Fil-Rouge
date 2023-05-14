@@ -15,7 +15,7 @@ class StaticData {
   //-- Nav & Hero
   public static readonly imagePath: string = "../../../public/assets/images";
   //-- Buttons
-  public static readonly sectionClass: string = "d-none accordion accordion-flush";
+  public static readonly sectionClass: string = "accordion accordion-flush";
   public static readonly sectionType: string = "section";
   public static readonly sectionId: string = "accordion sec-";
   //-- Sections

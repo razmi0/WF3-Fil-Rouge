@@ -4,10 +4,12 @@
 /* Path: public/assets/css/index.css */
 
 
-@import "./normalize.css";
-@import "./fonts.css";
-@import "./colors.css";
+@import "./base/normalize.css";
+@import "./base/fonts.css";
+@import "./base/colors.css";
 /* --- */
-@import "./body.css";
+@import "./main/cards.css";
+@import "./main/buttons.css";
+@import "./main/section.css";
 @import "./header/hero.css";
 @import "./header/nav.css";

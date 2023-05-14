@@ -1,38 +1,36 @@
 /* HERO CSS FILE */
 
-.hero {
-  /* position: relative; */
-  /* margin-top: 10px; */
+div.hero{
+  margin-bottom: -5%;
 }
 
 img.hero {
-  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
+
+
 /* Styles de l'encart du menu */
 .menu-encart-cadre {
-  position: absolute;
+  position: relative;
   left: 50%;
-  bottom: 30%;
   transform: translateX(-50%);
   border-radius: 10px;
   padding: 2% 5% 2% 5%;
   border: 2px solid #d0cdc2;
   background-color: white;
-  overflow: hidden; /* Masquer le contenu débordant */
-  width: calc(
-    80vw - 20px
-  ); /* Définir une largeur en fonction de la largeur de la fenêtre moins les marges */
-  max-width: 300px; /* Définir une largeur maximale pour l'encart */
+  overflow: hidden; 
+  width: fit-content;
 }
 
 /* Style du texte dans l'encart */
 .menu-encart-texte {
-  /* font-size: calc(
+  font-size: calc(
     2vw + 50%
-  ); Définir une taille de police en fonction de la largeur de la fenêtre */
+  );
   text-align: center;
-  white-space: nowrap; /* Empêcher le texte de passer à la ligne */
-  text-overflow: ellipsis; /* Afficher les points de suspension (...) si le texte dépasse */
+  white-space: nowrap; 
+  text-overflow: ellipsis;
 }

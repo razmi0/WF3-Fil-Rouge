@@ -13,7 +13,7 @@ class StaticData {
     //-- Nav & Hero
     static imagePath = "../../../public/assets/images";
     //-- Buttons
-    static sectionClass = "d-none accordion accordion-flush";
+    static sectionClass = "accordion accordion-flush";
     static sectionType = "section";
     static sectionId = "accordion sec-";
     //-- Sections
