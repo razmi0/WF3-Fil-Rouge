@@ -1,7 +1,7 @@
 // Description: Contient le template de Button
 // path to the file: src/templates/classes/Button.ts
 //--
-import { Body } from "../Modules.js";
+import { Main } from "../Modules.js";
 /**
  * @class Button
  * @description A class to generate complete Buttons elements
@@ -12,7 +12,7 @@ import { Body } from "../Modules.js";
  * @property {string} class - Classe du button
  * @property {string} id - Id du button
  */
-class Button extends Body {
+class Button extends Main {
     element;
     type;
     text;

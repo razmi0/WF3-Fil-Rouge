@@ -1,9 +1,9 @@
-// Body Components Rendering
-// Path : src/components/classes/Body.ts
+// Main Components Rendering
+// Path : src/components/classes/Main.ts
 // --
 // IMPORTS
 import { StaticData, Button, Section, Card, stringFormat, initComponents, addAllButtonsEvents, } from "../Modules.js";
-class Body {
+class Main {
     fetchedData = [];
     ressources = [];
     products = [];
@@ -74,9 +74,9 @@ class Body {
         }
         catch (e) {
             console.warn(e);
-            throw new Error("Error while running Body.run()");
+            throw new Error("Error while running Main.run()");
         }
     }
 }
-export default Body;
-//# sourceMappingURL=Body.js.map
+export default Main;
+//# sourceMappingURL=Main.js.map

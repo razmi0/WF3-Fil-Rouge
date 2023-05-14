@@ -3,7 +3,7 @@
 //--
 
 import { SectionElement } from "../../interface/index-types.js";
-import Body from "./Body.js";
+import Main from "./Main.js";
 
 /**
  * @class Section

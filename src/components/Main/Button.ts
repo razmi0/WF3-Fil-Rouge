@@ -3,7 +3,7 @@
 //--
 
 import { ButtonElement } from "../../interface/index-types.js";
-import { Body } from "../Modules.js";
+import { Main } from "../Modules.js";
 
 /**
  * @class Button
@@ -16,7 +16,7 @@ import { Body } from "../Modules.js";
  * @property {string} id - Id du button
  */
 
-class Button extends Body {
+class Button extends Main {
   private element: string;
   private type: string;
   private text: string;

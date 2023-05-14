@@ -1,12 +1,12 @@
 // Description: Main file for the project
-// path to the file: main.js
+// path to the file: app.js
 // --
 import DbData from "./services/DbData.js";
-import { Header, Body } from "./components/Modules.js";
+import { Header, Main } from "./components/Modules.js";
 //------------------------------------//
-//---------- Body Rendering ----------//
+//---------- Main Rendering ----------//
 //------------------------------------//
-const body = new Body();
+const body = new Main();
 (async () => {
     //------------------------------------//
     performance.mark("start");
@@ -23,4 +23,4 @@ const body = new Body();
 })();
 const header = new Header();
 header.run();
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=app.js.map

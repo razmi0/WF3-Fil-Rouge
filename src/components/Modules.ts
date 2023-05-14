@@ -16,7 +16,7 @@ import StaticData from "../services/StaticData.js";
 
 // From components
 import Header from "./Header.js";
-import Body from "./Main/Body.js";
+import Main from "./Main/Main.js";
 import Section from "./Main/Section.js";
 import Button from "./Main/Button.js";
 import Card from "./Main/Card.js";
@@ -47,7 +47,7 @@ import { ButtonElements, SectionElements } from "../interface/index-types.js";
 
 // Exportation Classes
 //--
-export { StaticData, Header, Body, Button, Section, Card };
+export { StaticData, Header, Main, Button, Section, Card };
 
 // Exportation fonctions utilitaires
 //--

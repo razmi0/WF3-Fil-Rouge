@@ -1,5 +1,5 @@
-// Body Components Rendering
-// Path : src/components/classes/Body.ts
+// Main Components Rendering
+// Path : src/components/classes/Main.ts
 // --
 
 // IMPORTS
@@ -16,7 +16,7 @@ import {
   addAllButtonsEvents,
 } from "../Modules.js";
 
-class Body {
+class Main {
   private fetchedData: any[] = [];
   private ressources: string[] = [];
   private products: any[] = [];
@@ -102,9 +102,9 @@ class Body {
       this.addEvents();
     } catch (e) {
       console.warn(e);
-      throw new Error("Error while running Body.run()");
+      throw new Error("Error while running Main.run()");
     }
   }
 }
 
-export default Body;
+export default Main;

@@ -33,4 +33,5 @@ img.hero {
   text-align: center;
   white-space: nowrap; 
   text-overflow: ellipsis;
+  margin-bottom: 0;
 }
