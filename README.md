@@ -8,7 +8,6 @@ The component rendering follow json structure. Fully dynamic.
 
 ## Folder Project Structure
 
-    ```bash
 project-root
 ├── dist (generated)
 ├── public
@@ -33,7 +32,7 @@ project-root
 │   └── tests
 └──app.js
 
-    ```
+
 
 ### Details techniques :
 
