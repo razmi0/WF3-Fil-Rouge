@@ -32,6 +32,7 @@ project-root
 │   ├── utils
 │   └── tests
 └──app.js
+
     ```
 
 ### Details techniques :
