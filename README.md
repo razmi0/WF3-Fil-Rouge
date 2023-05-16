@@ -8,6 +8,8 @@ The component rendering follow json structure. Fully dynamic.
 
 ## Folder Project Structure
 
+<pre>
+
 project-root
 ├── dist (generated)
 ├── public
@@ -32,7 +34,7 @@ project-root
 │   └── tests
 └──app.js
 
-
+</pre>
 
 ### Details techniques :
 
