@@ -9,6 +9,12 @@ export function addAllButtonsEvents(): void {
   buttonSort("#btn-viandes", "[data-type='viandes']");
   buttonSort("#btn-glaces", "[data-type='glaces']");
   buttonSort("#btn-poissons", "[data-type='poissons']");
+  buttonSort("#title-boissons", "[data-type='boissons']");
+  buttonSort("#title-desserts", "[data-type='desserts']");
+  buttonSort("#title-viandes", "[data-type='viandes']");
+  buttonSort("#title-glaces", "[data-type='glaces']");
+  buttonSort("#title-poissons", "[data-type='poissons']");
+
 }
 
 function changeButtonStyle(button: HTMLButtonElement): void {

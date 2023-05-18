@@ -8,6 +8,11 @@ export function addAllButtonsEvents() {
     buttonSort("#btn-viandes", "[data-type='viandes']");
     buttonSort("#btn-glaces", "[data-type='glaces']");
     buttonSort("#btn-poissons", "[data-type='poissons']");
+    buttonSort("#title-boissons", "[data-type='boissons']");
+    buttonSort("#title-desserts", "[data-type='desserts']");
+    buttonSort("#title-viandes", "[data-type='viandes']");
+    buttonSort("#title-glaces", "[data-type='glaces']");
+    buttonSort("#title-poissons", "[data-type='poissons']");
 }
 function changeButtonStyle(button) {
     if (button.classList.contains("bg-3")) {

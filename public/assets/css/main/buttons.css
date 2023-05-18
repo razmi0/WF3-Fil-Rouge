@@ -1,65 +1,57 @@
 /* BUTTON  */
 
-
-
-
 div[id="btn-container"] {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    padding: 10px;
-    margin: 10px;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+}
 
-  }
-  
-  div[id="btn-container"] > button[data-button] {
-    height: auto;
-    width: fit-content;
-    border-radius: 5px;
-    margin: 5px 10px;
-    background-color: var(--bg-3) ;
-    font-size:2vw;
-    color : #e8e8e8;
-  }
-  div[id="btn-container"] > button[data-button]:hover {
-    background-color: rgb(159, 167, 147);
-    transition: background-color 100ms ease-in-out;
-    filter : brightness(1.2);
-    outline: none;
-    border : none;
+div[id="btn-container"] > button[data-button] {
+  height: auto;
+  width: fit-content;
+  border-radius: 5px;
+  margin: 5px 10px;
+  background-color: var(--bg-3);
+  font-size: 2vw;
+  color: white;
+}
+div[id="btn-container"] > button[data-button]:hover {
+  background-color: rgb(159, 167, 147);
+  transition: background-color 100ms ease-in-out;
+  filter: brightness(1.2);
+  outline: none;
+  border: none;
+}
+div[id="btn-container"] > button[data-button]:focus {
+  color: black;
+  outline: none;
+  border: none;
+}
 
-
-
-  }
-  div[id="btn-container"] > button[data-button]:focus {
-    color: black;
-    outline: none;
-    border : none;
-  }
-  
-@media (max-width: 600px){
+@media (max-width: 600px) {
   div[id="btn-container"] > button[data-button] {
     font-size: 13px;
   }
 }
 
-
-  @media screen and (max-width: 300px) {
-    div[id="btn-container"] {
-      padding: 2px;
-      margin: 10px 2px;
-    }
-    div[id="btn-container"] > button[data-button] {
-      width: 5rem;
-      margin: 2px 5px;
-      font-size: 11px;
-    }
+@media screen and (max-width: 300px) {
+  div[id="btn-container"] {
+    padding: 2px;
+    margin: 10px 2px;
   }
-@media screen and  (max-width : 375px ) {
   div[id="btn-container"] > button[data-button] {
-    display : none;
+    width: 5rem;
+    margin: 2px 5px;
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 578px) {
+  div[id="btn-container"] > button[data-button] {
+    display: none;
   }
 }

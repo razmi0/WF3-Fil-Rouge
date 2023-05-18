@@ -29,7 +29,7 @@ class Section {
     template() {
         return `
     
-    <h3 class="section__title">${(this.data).charAt(0).toUpperCase() + (this.data).slice(1)}</h3>
+    <h3 class="section__title" id="${'title-' + this.data}">${(this.data).charAt(0).toUpperCase() + (this.data).slice(1)}</h3>
       <${this.element}
              class="${this.class}"
               id="${this.id}"

@@ -12,9 +12,9 @@
  */
 export function syncTimeTest(fc, parameters = null, flag = false) {
     try {
-        const t1 = performance.now();
-        flag ? fc(parameters) : fc();
-        const t2 = performance.now();
+        const t1 = performance.now(); // start time
+        flag ? fc(parameters) : fc(); // appel function 
+        const t2 = performance.now(); // end time
         console.log({
             Execution: `${fc.name}(${parameters})`,
             Time: `${t2 - t1} ms`,
