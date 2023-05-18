@@ -17,9 +17,9 @@ div[id="btn-container"] {
     width: fit-content;
     border-radius: 5px;
     margin: 5px 10px;
-    font-size: calc(
+    font-size:
         2vw
-      );
+      ;
   }
   div[id="btn-container"] > button[data-button]:hover {
     background-color: rgb(159, 167, 147);

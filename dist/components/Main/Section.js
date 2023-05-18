@@ -28,13 +28,17 @@ class Section {
      */
     template() {
         return `
-            <${this.element}
+    
+    <h3 class="section__title">${(this.data).charAt(0).toUpperCase() + (this.data).slice(1)}</h3>
+      <${this.element}
              class="${this.class}"
               id="${this.id}"
               data-type="${this.data}">
-              </${this.element}>
+      </${this.element}>
+      
             `;
     }
+    // <div class="cards_container" data-type="${this.data}"></div>
     /**
      * @method render
      * @visibility public
