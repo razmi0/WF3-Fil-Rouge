@@ -32,6 +32,8 @@ project-root
 │   └── tests
 └──app.js
 
+pages > contact.html
+
 </pre>
 
 ### Details techniques :
@@ -148,3 +150,11 @@ Le fichier <strong>"./app.js"</strong> est le point d'entrée du navigateur dans
 Les dossiers non-décrit comme "./interface" ou "./types" sont des dossiers lié à mon utilisation de Typescript donc dispensable. Pareil pour les fichiers terminant en .d.ts, .d.js , .d.map.js et enfin .d.map.ts.
 
 </p>
+
+
+
+
+
+
+
+<button type="reset">Reset</button>

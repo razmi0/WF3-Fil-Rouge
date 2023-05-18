@@ -2,6 +2,21 @@
 
 /* Path: public\assets\css\colors.css */
 
+
+
+/* VAR */
+
+
+:root {
+  --bg-1: #000000;
+  --bg-2: #d0cdc2;
+  --bg-3: #a9b19d;
+  --bg-4: #735e5d;
+  --bg-5: #b34b4b;
+}
+
+
+/* CLASS */
 .bg-1 {
   background-color: #000000;
 }

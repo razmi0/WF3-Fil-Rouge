@@ -3,6 +3,7 @@
 // --
 import DbData from "./services/DbData.js";
 import { Header, Main } from "./components/Modules.js";
+// import { syncTimeTest, asyncTimeTest } from "./tests/performance.js";
 //------------------------------------//
 //---------- Main Rendering ----------//
 //------------------------------------//

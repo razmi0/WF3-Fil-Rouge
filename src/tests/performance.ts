@@ -12,15 +12,11 @@
  * @param {boolean} flag Flag to indicate if the function to be executed has parameters
  * @returns {Promise<void | { success : boolean } >} return a promise with the result of the execution
  */
-export function syncTimeTest(
-  fc: CallableFunction,
-  parameters: any = null,
-  flag: boolean = false
-) : { success : boolean } {
+export function syncTimeTest(fc: CallableFunction, parameters: any = null, flag: boolean = false) : { success : boolean } {
   try {
-      const t1 = performance.now();
-      flag ?  fc(parameters) :  fc();
-      const t2 = performance.now();
+      const t1 = performance.now(); // start time
+      flag ?  fc(parameters) :  fc(); // appel function 
+      const t2 = performance.now(); // end time
       console.log({
         Execution: `${fc.name}(${parameters})`,
         Time: `${t2 - t1} ms`,

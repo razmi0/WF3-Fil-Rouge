@@ -43,7 +43,7 @@ class Card {
       <img src="${this.imageSrc}" alt="${this.imageAlt}" />
     </div>
     <div class="card__title">
-      <h3 class="card__title_text">${this.name}</h3>
+      <h4 class="card__title_text">${this.name}</h4>
     </div>
     </div>
     <div class="card__body">
